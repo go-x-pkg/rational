@@ -65,11 +65,9 @@ func TestRationalUnmarshal(t *testing.T) {
 				if tt.eErr == nil {
 					t.Errorf("#%d: err: %s", i, err)
 					return
-				} else {
-					if !errors.Is(err, tt.eErr) {
-						t.Errorf("#%d: unexpected error: got %#v expected %#v", i, err, tt.eErr)
-						return
-					}
+				} else if !errors.Is(err, tt.eErr) {
+					t.Errorf("#%d: unexpected error: got %#v expected %#v", i, err, tt.eErr)
+					return
 				}
 			}
 
