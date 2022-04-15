@@ -31,6 +31,24 @@ func (r Rational) String() string {
 	return fmt.Sprintf("%d%c%d", r.Num, sep, r.Den)
 }
 
+// String returns string representation with sepAlt.
+func (r Rational) StringAlt() string {
+	if r.Num == 0 {
+		return "0"
+	}
+
+	return fmt.Sprintf("%d%c%d", r.Num, sepAlt, r.Den)
+}
+
+// String returns string representation with sepAlt.
+func (r Rational) StringAlt2() string {
+	if r.Num == 0 {
+		return "0"
+	}
+
+	return fmt.Sprintf("%d%c%d", r.Num, sepAlt2, r.Den)
+}
+
 // Reverse returns reversed Rational.
 func (r Rational) Reverse() Rational {
 	return Rational{r.Den, r.Num}

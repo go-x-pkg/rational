@@ -89,6 +89,9 @@ func TestRationalUnmarshal(t *testing.T) {
 				data.Rational.Float64()
 				data.Rational.Reverse().Float64()
 				data.Rational.Percent()
+				data.Rational.String()
+				data.Rational.StringAlt()
+				data.Rational.StringAlt2()
 
 				if !data.Rational.IsNil() && tt.eIsNil {
 					t.Errorf("#%d: rational exp expeted to be nil", i)
